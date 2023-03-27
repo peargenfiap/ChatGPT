@@ -32,11 +32,27 @@
         android:id="@+id/text_input_layout_message"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:hint="@string/message_hint"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-
+        app:layout_constraintEnd_toStartOf="@id/button_send_message"
         >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_input_edit_text_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_send_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_send_message_label"
+        app:layout_constraintTop_toTopOf="@+id/text_input_layout_message"
+        app:layout_constraintBottom_toBottomOf="@+id/text_input_layout_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_input_layout_message"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
